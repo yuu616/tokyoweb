@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探索東京 - 現代與傳統的完美融合</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600') center/cover;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        header h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 1s ease;
+        }
+
+        header p {
+            font-size: 1.3em;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .intro {
+            background: white;
+            padding: 60px 40px;
+            margin: -50px auto 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .intro h2 {
+            color: #667eea;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .intro p {
+            font-size: 1.1em;
+            color: #555;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+
+        .attractions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-content h3 {
+            color: #667eea;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+        }
+
+        .card-content p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .highlight h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .highlight p {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            .attractions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🗼 探索東京</h1>
+        <p>體驗日本首都的無限魅力</p>
+    </header>
+
+    <div class="container">
+        <section class="intro">
+            <h2>歡迎來到東京</h2>
+            <p>東京，這座融合傳統與現代的國際大都會，擁有超過1300萬人口，是日本的政治、經濟與文化中心。從古老的寺廟神社到摩天大樓林立的都市景觀，從寧靜的日式庭園到熱鬧的購物街區，東京展現了日本獨特的雙重魅力。</p>
+            <p>無論您是美食愛好者、購物狂熱者、歷史文化探索者，還是動漫迷，東京都能滿足您的每一個期待。讓我們一起探索這座永不停歇的城市！</p>
+        </section>
+
+        <section class="attractions">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542640244-7e672d6cef4e?w=800" alt="淺草寺" class="card-image">
+                <div class="card-content">
+                    <h3>⛩️ 淺草寺</h3>
+                    <p>東京最古老的寺廟，建於628年。走過雷門的巨大紅色燈籠，漫步在仲見世通商店街，品嚐傳統小吃，感受江戶時代的風情。這裡是體驗日本傳統文化的最佳起點，每年吸引數千萬遊客前來參拜。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=800" alt="澀谷十字路口" class="card-image">
+                <div class="card-content">
+                    <h3>🌆 澀谷十字路口</h3>
+                    <p>世界上最繁忙的路口之一，每次綠燈亮起可容納超過3000人同時通行。這裡是東京現代化的象徵，霓虹燈閃爍的建築、時尚的購物中心和年輕活力的氛圍，完美詮釋了東京的都市魅力。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1480796927426-f609979314bd?w=800" alt="東京鐵塔" class="card-image">
+                <div class="card-content">
+                    <h3>🗼 東京鐵塔</h3>
+                    <p>高333公尺的東京鐵塔是這座城市的經典地標。登上觀景台，可以360度俯瞰整個東京的壯麗景色。夜晚點燈後的鐵塔更是浪漫至極，是情侶約會和遊客必訪的景點。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528164344705-47542687000d?w=800" alt="新宿御苑" class="card-image">
+                <div class="card-content">
+                    <h3>🌸 新宿御苑</h3>
+                    <p>都市中的綠洲，擁有日式、英式和法式三種風格的庭園。春天櫻花盛開時，這裡是東京最佳的賞櫻勝地之一。佔地58公頃的廣闊空間，讓您可以暫時遠離城市的喧囂，享受片刻寧靜。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?w=800" alt="築地市場" class="card-image">
+                <div class="card-content">
+                    <h3>🍣 豐洲市場</h3>
+                    <p>從築地搬遷而來的豐洲市場，是世界最大的魚市場。清晨的鮪魚拍賣、新鮮的海鮮丼飯和壽司，讓美食愛好者流連忘返。這裡是體驗東京飲食文化的必訪之地。</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800" alt="秋葉原" class="card-image">
+                <div class="card-content">
+                    <h3>🎮 秋葉原</h3>
+                    <p>動漫、電玩和科技愛好者的天堂。這個充滿活力的街區擁有無數的電器商店、動漫專賣店、女僕咖啡廳和遊戲中心。秋葉原完美展現了日本的御宅文化和創意產業。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="highlight">
+            <h2>開始您的東京之旅</h2>
+            <p>東京四季分明，每個季節都有獨特的美景與活動。春天賞櫻、夏天煙火、秋天楓葉、冬天點燈，一年365天都是造訪東京的好時機。無論您停留幾天，這座城市總能帶給您驚喜與感動。</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 探索東京 | 讓每一次旅行都成為美好回憶</p>
+    </footer>
+</body>
+</html>
